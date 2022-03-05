@@ -2,8 +2,8 @@
  * Example model
  */
 
- module.exports = (bookshelf) => {
-	return bookshelf.model('Example', {
-		tableName: 'examples',
+module.exports = (bookshelf) => {
+	return bookshelf.model('User', {
+		tableName: 'users',
 	});
 };
