@@ -5,8 +5,6 @@ const { User } = require('../models');
  
 // HTTP Basic Authentication
 const basic = async(req, res, next) => {
-    debug("Hello from auth basic");
-
     // make sure Authorization header exists, otherwise fail
     if (!req.headers.authorization) {
         debug("Authorization header missing")
@@ -17,15 +15,7 @@ const basic = async(req, res, next) => {
         });
     }
 
-    // log headers to console
-    // console.log("headers:", req.headers);
-
     debug("Authorization header: %o", req.headers.authorization);
-
-    // split header into "<authSchema> <base64Payload>"
-    // auth.split(' ')
-    // [0] = Basic
-    // [1] = cGVsbUG981nsadj75
     const [authSchema, base64Payload] = req.headers.authorization.split(' ');
 
     // if authSchema isnt basic then bail

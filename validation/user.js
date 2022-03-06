@@ -5,24 +5,24 @@ const models = require('../models');
 
 // Create User validation rules
 const createRules = [
-    body('email').exists().isLength({ min: 3 }).custom(async value => {
-        const user = await new models.User({ username: value }).fetch({ require: false });
-        if (user) {
-            return Promise.reject("Email already exists.");
+    body('email').exists().isEmail().custom(async value => {
+        const email = await new models.User({ email: value }).fetch({ require: false });
+        if (email) {
+            return Promise.reject("Email already exists, please try another one.");
         }
 
         return Promise.resolve();
     }),
-    body('password').exists().isLength({ min: 4 }),
-    body('first_name').exists().isLength({ min: 2 }),
-    body('last_name').exists().isLength({ min: 2 }),
+    body('password').exists().isLength({ min: 6 }),
+    body('first_name').exists().isLength({ min: 3 }),
+    body('last_name').exists().isLength({ min: 3 }),
 ];
 
 // Update User validation rules
 const updateRules = [
-    body('password').optional().isLength({ min: 4 }),
-    body('first_name').optional().isLength({ min: 2 }),
-    body('last_name').optional().isLength({ min: 2 }),
+    body('password').optional().isLength({ min: 6 }),
+    body('first_name').optional().isLength({ min: 3 }),
+    body('last_name').optional().isLength({ min: 3 }),
 ];
 
 module.exports = {

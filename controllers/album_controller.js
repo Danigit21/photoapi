@@ -1,18 +1,18 @@
 // Album controller
 
-const debug = require('debug')('books:author_controller');
+const debug = require('debug')('photoapi:album_controller');
 const { matchedData, validationResult } = require('express-validator');
 const models = require('../models');
 
 // Get all resources
 // GET /
 const index = async (req, res) => {
-    const all_albums = await models.Album.fetchAll();
+    const albums = await models.Album.fetchAll();
 
     res.send({
         status: 'success',
         data: {
-            authors: all_albums
+            albums
         }
     });
 }
@@ -21,7 +21,7 @@ const index = async (req, res) => {
 // GET /:albumId
 const show = async (req, res) => {
     const album = await new models.Album({ id: req.params.albumId })
-        .fetch({ withRelated: ['photos'] });
+        .fetch({ withRelated: ['photos, users'] });
 
     res.send({
         status: 'success',
@@ -66,9 +66,9 @@ const store = async (req, res) => {
 
 
 // Update a specific resource
-// POST /:albumId
+// PUT /:albumId
 const update = async (req, res) => {
-    const albumId = req.params.authorId;
+    const albumId = req.params.albumId;
 
     // make sure album exists
     const album = await new models.Album({ id: albumId }).fetch({ require: false });

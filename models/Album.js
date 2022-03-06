@@ -1,12 +1,17 @@
 // Album model
+
 module.exports = (bookshelf) => {
 	return bookshelf.model('Album', {
 		tableName: 'albums',
+		photos() {
+			return this.belongsToMany('Photo');
+		},
         users() {
             return this.belongsTo('User');
-        },
-		photos() {
-			return this.hasMany('Photo');
-		},
+        }
+	}, {
+		async fetchById(id) {
+			return await new this({ id }).fetch();
+		}
 	});
 }
