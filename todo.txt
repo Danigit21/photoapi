@@ -15,3 +15,12 @@
 7. post add photo to album doesnt work.
 
 something wrong with my database script, check mysql
+
+
+USERS:
+
+email: johan@hej.com
+password: asdf
+
+email: sean_banan@da.com
+password: chiquita
