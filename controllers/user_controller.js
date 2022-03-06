@@ -1,6 +1,6 @@
 // User controller
 
-const debug = require('debug')('books:user_controller');
+const debug = require('debug')('photoapi:user_controller');
 const { matchedData, validationResult } = require('express-validator');
 const models = require('../models');
 

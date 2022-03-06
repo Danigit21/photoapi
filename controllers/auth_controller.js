@@ -32,9 +32,8 @@ const register = async(req, res) => {
     } catch (error) {
         return res.status(500).send({
             status: 'error',
-            message: 'Exception from when hasing the password.',
+            message: 'Exception from when hashing the password.',
         });
-        
         throw error;
     }
 

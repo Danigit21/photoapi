@@ -23,18 +23,17 @@ const register = async(req, res) => {
     // generate a has of validData.password and overwrite valiData.password with the generated hash
     try {
 
-        
+        /*
         const hashedPassword = await bcrypt.hash(validData.password, 10);
         validData.password = hashedPassword;
-        
+        */
        
-        // validData.password = await bcrypt.hash(validData.password, 10);
+        validData.password = await bcrypt.hash(validData.password, 10);
 
     } catch (error) {
-
         return res.status(500).send({
             status: 'error',
-            message: 'Exception from when hashing the password.'
+            message: 'Exception from when hashing the password.',
         });
         throw error;
     }
@@ -53,7 +52,7 @@ const register = async(req, res) => {
     } catch (error) {
         res.status(500).send({
             status: 'error',
-            message: 'Exception thrown in database when creating a new user.'
+            message: 'Exception thrown in database when creating a new user.',
         });
         throw error;
     }

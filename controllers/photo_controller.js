@@ -1,6 +1,6 @@
 // Photo Controller
 
-const debug = require('debug')('books:book_controller');
+const debug = require('debug')('photoapi:photo_controller');
 const models = require('../models');
 const { matchedData, validationResult } = require('express-validator');
 
@@ -17,6 +17,7 @@ const index = async (req, res) => {
     });
 }
  
+
 // Get a specific resource
 // GET /:photoId
 const show = async (req, res) => {
@@ -26,11 +27,12 @@ const show = async (req, res) => {
     res.send({
         status: 'success',
         data: {
-            photo,
+            photo
         }
     });
 }
  
+
 // Store a new resource
 // POST /
 const store = async (req, res) => {
@@ -47,7 +49,7 @@ const store = async (req, res) => {
         res.send({
             status: 'success',
             data: {
-                photo,
+                photo
             },
         });
 
@@ -59,9 +61,20 @@ const store = async (req, res) => {
         throw error;
     }
 }
+
+
+// Update a specific resource
+// POST /:photoId
+const update = (req, res) => {
+    res.status(405).send({
+        status: 'fail',
+        message: 'Method Not Allowed.',
+    });
+}
  
 module.exports = {
     index,
     show,
     store,
+    update
 }
