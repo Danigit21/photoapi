@@ -20,3 +20,10 @@ password: asdf
 
 email: sean_banan@da.com
 password: chiquita
+
+
+adding to heroku:
+
+git add .
+git commit -m ""
+git push heroku main
