@@ -1,17 +1,13 @@
-const bcrypt = require('bcrypt');
+// User model
 
 module.exports = (bookshelf) => {
 	return bookshelf.model('User', {
 		tableName: 'users',
 		albums() {
-			return this.hasMany('Albums');
+			return this.hasMany('Album');
 		},
 		photos() {
-			return this.hasMany('Photos');
-		}
-	}, {
-		async fetchById(id) {
-			return await new this({ id }).fetch();
+			return this.hasMany('Photo');
 		}
 	});
 };

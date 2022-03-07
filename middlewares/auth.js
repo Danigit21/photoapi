@@ -1,7 +1,7 @@
 // Authentication Middleware
 
 const debug = require('debug')('photoapi:auth');
-const { User } = require('../models');
+// const models = require('../models');
  
 // HTTP Basic Authentication
 const basic = async(req, res, next) => {
@@ -15,6 +15,7 @@ const basic = async(req, res, next) => {
         });
     }
 
+    /*
     debug("Authorization header: %o", req.headers.authorization);
     const [authSchema, base64Payload] = req.headers.authorization.split(' ');
 
@@ -37,7 +38,7 @@ const basic = async(req, res, next) => {
     // split decoded payload into "<username>:<password>"
     const [username, password] = decodedPayload.split(':');
 
-    const user = await User.login(username, password);
+    const user = await models.User.login(username, password);
     
     if (!user) {
         return res.status(401).send({
@@ -52,9 +53,9 @@ const basic = async(req, res, next) => {
 
     // pass request along, need to "call" next() or else no process
     next();
+    */
 }
  
 module.exports = {
     basic,
 }
- 

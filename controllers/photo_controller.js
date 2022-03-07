@@ -1,8 +1,8 @@
 // Photo Controller
 
 const debug = require('debug')('photoapi:photo_controller');
-const models = require('../models');
 const { matchedData, validationResult } = require('express-validator');
+const models = require('../models');
 
 // Get all resources
 // Get /

@@ -6,7 +6,7 @@ const { matchedData, validationResult } = require('express-validator');
 const models = require('../models');
 
 // Register a new user
-// POST /
+// POST /register
 const register = async(req, res) => {
     // check for any validation errors
     const errors = validationResult(req);

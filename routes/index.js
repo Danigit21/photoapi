@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('../controllers/user_controller');
-const validationRules = require('../validation/user');
+const userController = require('../controllers/user_controller');
+const userValidationRules = require('../validation/user');
 
 // GET /
 router.get('/', (req, res, next) => {
@@ -18,6 +18,6 @@ router.use('/photos', require('./photos'));
 // router.use('/users', require('./user'), auth.basic);
 
 // register a user
-router.post('/register', controller.register, validationRules.createRules);
+router.post('/register', userController.register, userValidationRules.createRules);
 
 module.exports = router;

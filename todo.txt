@@ -1,21 +1,16 @@
 @todo list
 
-1. register still doesnt work, hashing/bcrypt problems?
+1. GET /albums/:albumId doesn't work, "photos, users is not defined on the model."
 
-2. post photos doesnt work, "Field 'title' doesn't have a default value"
+2. POST /register doesn't work, "data and salt arguments required."
 
-3. put photos doesnt work, only showing the photo with  "'select `photos`.* from `photos` where `photos`.`id` = ? limit ?'".
+3. POST /albums and POST /photos doesn't work, "Field 'title' doesn't have a default value."
 
-4. get specific album doesnt work "Error: photos, users is not defined on the model.".
+4. POST /albums/:albumId/photos doesnt work. more research needed.
 
-5. post album doesnt work, "Field 'title' doesn't have a default value"
+5. PUT /albums/:albumId and /photos/:photoId doesn't work, showing the same info before update but it says status: success.
 
-6. put photos doesnt work, only showing the photo with  "'select `albums`.* from `albums`'"
-
-7. post add photo to album doesnt work.
-
-something wrong with my database script, check mysql
-
+something wrong with my database script? check mysql
 
 USERS:
 
