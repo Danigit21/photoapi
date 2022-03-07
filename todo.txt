@@ -3,10 +3,11 @@
 1. GET /albums/:albumId doesn't work, "photos, users is not defined on the model."
 
 2. POST /register doesn't work, "data and salt arguments required."
+validata password = undefined?
 
 3. POST /albums and POST /photos doesn't work, "Field 'title' doesn't have a default value."
 
-4. POST /albums/:albumId/photos doesnt work. more research needed.
+4. POST /albums/:albumId/photos doest it work?
 
 5. PUT /albums/:albumId and /photos/:photoId doesn't work, showing the same info before update but it says status: success.
 
