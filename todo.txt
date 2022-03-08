@@ -4,17 +4,16 @@
 
 2. POST /albums/:albumId/photos doesn't work?
 
+3. GET works but not with the authentication?
+
 something wrong with my database script? check mysql
 remake database
-user = user
-author = album
-book = photo
 
 remove photo_id from albums or make photo_id no value(empty)?
 remove user_id from photos or make user_id no value(empty)?
 
-USERS:
 
+USERS:
 email: johan@hej.com
 password: asdf
 
@@ -23,7 +22,6 @@ password: chiquita
 
 
 adding to heroku:
-
 git add .
 git commit -m ""
 git push heroku main
