@@ -10,9 +10,9 @@ router.get('/', photoController.index);
 router.get('/:photoId', photoController.show);
 
 /* Store a new resource */
-router.post('/', photoController.store, photoValidationRules.createRules);
+router.post('/', photoValidationRules.createRules, photoController.store);
 
 /* Update a specific resource */
-router.put('/:photoId', photoController.update, photoValidationRules.updateRules);
+router.put('/:photoId', photoValidationRules.updateRules, photoController.update);
 
 module.exports = router;

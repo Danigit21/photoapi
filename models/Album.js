@@ -14,4 +14,4 @@ module.exports = (bookshelf) => {
 			return await new this({ id }).fetch();
 		}
 	});
-}
+};

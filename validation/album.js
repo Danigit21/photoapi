@@ -28,4 +28,4 @@ module.exports = {
     createRules,
     updateRules,
 	addPhotoRules
-}
+};

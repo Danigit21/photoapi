@@ -9,5 +9,9 @@ module.exports = (bookshelf) => {
 		users() {
 			return this.belongsTo('User');
 		}
+	}, {
+		async fetchById(id) {
+			return await new this({ id }).fetch();
+		}
 	});
-}
+};

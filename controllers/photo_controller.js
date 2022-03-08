@@ -22,7 +22,7 @@ const index = async (req, res) => {
 // GET /:photoId
 const show = async (req, res) => {
     const photo = await new models.Photo({ id: req.params.photoId })
-        .fetch({ withRelated: ['albums', 'users'] });
+        .fetch();   // remove withrelated to remove unnecessary info "{ withRelated: ['albums', 'users'] }"
 
     res.send({
         status: 'success',
@@ -80,7 +80,7 @@ const update = async (req, res) => {
 
         res.status(404).send({
         status: 'fail',
-        data: 'photo Not Found',
+        data: 'Photo not found',
         });
 
         return;
@@ -110,7 +110,7 @@ const update = async (req, res) => {
     } catch (error) {
         res.status(500).send({
         status: 'error',
-        message: 'Exception thrown in database when updating a new photo.',
+        message: 'Exception thrown in database when updating photo.',
         });
         throw error;
     }
@@ -121,4 +121,4 @@ module.exports = {
     show,
     store,
     update
-}
+};

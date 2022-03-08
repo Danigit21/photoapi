@@ -10,12 +10,12 @@ router.get('/', albumController.index);
 router.get('/:albumId', albumController.show);
 
 /* Store a new resource */
-router.post('/', albumController.store, albumValidationRules.createRules);
+router.post('/', albumValidationRules.createRules, albumController.store);
 
 /* Store a new resource to an album */
-router.post('/:albumId/photos', albumController.addPhoto, albumValidationRules.addPhotoRules);
+router.post('/:albumId/photos', albumValidationRules.addPhotoRules, albumController.addPhoto);
 
 /* Update a specific resource */
-router.put('/:albumId', albumController.update, albumValidationRules.updateRules);
+router.put('/:albumId', albumValidationRules.updateRules, albumController.update);
 
 module.exports = router;

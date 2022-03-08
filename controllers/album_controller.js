@@ -21,7 +21,7 @@ const index = async (req, res) => {
 // GET /:albumId
 const show = async (req, res) => {
     const album = await new models.Album({ id: req.params.albumId })
-        .fetch({ withRelated: ['photos, users'] });
+        .fetch({ withRelated: ['photos', 'users'] });   // withrelated 'users' will show user info, remove it?
 
     res.send({
         status: 'success',
@@ -166,4 +166,4 @@ module.exports = {
     store,
     update,
     addPhoto
-}
+};
