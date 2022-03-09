@@ -1,16 +1,7 @@
 @todo list
 
-1. POST /register, /albums and POST /photos doesn't work, "Field 'title' doesn't have a default value."
-
-2. POST /albums/:albumId/photos doesn't work?
-
-3. GET works but not with the authentication?
-
-something wrong with my database script? check mysql
-remake database
-
-remove photo_id from albums or make photo_id no value(empty)?
-remove user_id from photos or make user_id no value(empty)?
+1. POST /albums and POST /photos doesn't work, "Field 'title' doesn't have a default value."
+2. Authentication doesnt work? can see everyones photos
 
 
 USERS:
@@ -19,6 +10,9 @@ password: asdf
 
 email: sean_banan@da.com
 password: chiquita
+
+email: photo@api.com
+password: photoapi
 
 
 adding to heroku:
