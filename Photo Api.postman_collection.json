@@ -12,13 +12,13 @@
 					"type": "basic",
 					"basic": [
 						{
-							"key": "username",
-							"value": "johan@hej.com",
+							"key": "password",
+							"value": "very-safe-password",
 							"type": "string"
 						},
 						{
-							"key": "password",
-							"value": "asdf",
+							"key": "username",
+							"value": "johan@hej.com",
 							"type": "string"
 						}
 					]
@@ -46,13 +46,13 @@
 					"type": "basic",
 					"basic": [
 						{
-							"key": "username",
-							"value": "johan@hej.com",
+							"key": "password",
+							"value": "very-safe-password",
 							"type": "string"
 						},
 						{
-							"key": "password",
-							"value": "asdf",
+							"key": "username",
+							"value": "johan@hej.com",
 							"type": "string"
 						}
 					]
@@ -81,13 +81,13 @@
 					"type": "basic",
 					"basic": [
 						{
-							"key": "username",
-							"value": "johan@hej.com",
+							"key": "password",
+							"value": "very-safe-password",
 							"type": "string"
 						},
 						{
-							"key": "password",
-							"value": "asdf",
+							"key": "username",
+							"value": "johan@hej.com",
 							"type": "string"
 						}
 					]
@@ -115,13 +115,13 @@
 					"type": "basic",
 					"basic": [
 						{
-							"key": "username",
-							"value": "johan@hej.com",
+							"key": "password",
+							"value": "very-safe-password",
 							"type": "string"
 						},
 						{
-							"key": "password",
-							"value": "asdf",
+							"key": "username",
+							"value": "johan@hej.com",
 							"type": "string"
 						}
 					]
@@ -178,13 +178,13 @@
 					"type": "basic",
 					"basic": [
 						{
-							"key": "username",
-							"value": "johan@hej.com",
+							"key": "password",
+							"value": "very-safe-password",
 							"type": "string"
 						},
 						{
-							"key": "password",
-							"value": "asdf",
+							"key": "username",
+							"value": "johan@hej.com",
 							"type": "string"
 						}
 					]
@@ -222,7 +222,7 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "asdf",
+							"value": "very-safe-password",
 							"type": "string"
 						},
 						{
@@ -260,6 +260,21 @@
 		{
 			"name": "POST /albums/:albumId/photos",
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "very-safe-password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "johan@hej.com",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -294,13 +309,13 @@
 					"type": "basic",
 					"basic": [
 						{
-							"key": "username",
-							"value": "johan@hej.com",
+							"key": "password",
+							"value": "very-safe-password",
 							"type": "string"
 						},
 						{
-							"key": "password",
-							"value": "asdf",
+							"key": "username",
+							"value": "johan@hej.com",
 							"type": "string"
 						}
 					]
@@ -338,13 +353,13 @@
 					"type": "basic",
 					"basic": [
 						{
-							"key": "username",
-							"value": "johan@hej.com",
+							"key": "password",
+							"value": "very-safe-password",
 							"type": "string"
 						},
 						{
-							"key": "password",
-							"value": "asdf",
+							"key": "username",
+							"value": "johan@hej.com",
 							"type": "string"
 						}
 					]
