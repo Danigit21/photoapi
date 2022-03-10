@@ -63,8 +63,7 @@ const register = async(req, res) => {
 // "password": ""
 
 const login = async (req, res) => {
-    const email = req.body.email;
-    const password = req.body.password;
+    const { email, password } = req.body
 
     // try to log in the user through email and password
     const user = await models.User.login(email, password);

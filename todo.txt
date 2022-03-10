@@ -7,14 +7,13 @@ Added authentication but keep on getting authorization failed for any requests
 
 USERS:
 email: johan@hej.com
-password: asdf
+password: very-safe-password
 
 email: sean_banan@da.com
-password: chiquita
+password: chiquitaBanana
 
 email: photo@api.com
-password: photoapi
-
+password: Photo-api12
 
 adding to heroku:
 git add .
