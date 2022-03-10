@@ -10,8 +10,8 @@ module.exports = (bookshelf) => {
 			return this.belongsTo('User');
 		}
 	}, {
-		async fetchById(id) {
-			return await new this({ id }).fetch();
+		async fetchById(id, fetchOpt = {}) {
+			return await new this({ id }).fetch(fetchOpt);
 		}
 	});
 };

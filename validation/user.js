@@ -3,7 +3,7 @@
 const { body } = require('express-validator');
 const models = require('../models');
 
-// Create User validation rules
+// Create user validation rules
 const createRules = [
     body('email').exists().isEmail().custom(async value => {
         const email = await new models.User({ email: value }).fetch({ require: false });
@@ -18,7 +18,7 @@ const createRules = [
     body('last_name').exists().isLength({ min: 3 }),
 ];
 
-// Update User validation rules
+// Update user validation rules
 const updateRules = [
     body('password').optional().isLength({ min: 6 }),
     body('first_name').optional().isLength({ min: 3 }),
@@ -27,5 +27,5 @@ const updateRules = [
 
 module.exports = {
     createRules,
-    updateRules,
+    updateRules
 };

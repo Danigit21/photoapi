@@ -1,21 +1,23 @@
+// Albums route
+
 const express = require('express');
 const router = express.Router();
-const albumController = require('../controllers/album_controller');
-const albumValidationRules = require('../validation/album');
+const controller = require('../controllers/album_controller');
+const validationRules = require('../validation/album');
 
-/* Get all resources */
-router.get('/', albumController.index);
+// Get all resources
+router.get('/', controller.index);
 
-/* Get a specific resource */
-router.get('/:albumId', albumController.show);
+// Get a specific resource
+router.get('/:albumId', controller.show);
 
-/* Store a new resource */
-router.post('/', albumValidationRules.createRules, albumController.store);
+// Store a new resource
+router.post('/', validationRules.createRules, controller.store);
 
-/* Store a new resource to an album */
-router.post('/:albumId/photos', albumValidationRules.addPhotoRules, albumController.addPhoto);
+// Attach new resource to another resource
+router.post('/:albumId/photos', validationRules.attachPhotoRules, controller.attachPhoto);
 
-/* Update a specific resource */
-router.put('/:albumId', albumValidationRules.updateRules, albumController.update);
+// Update a specific resource
+router.put('/:albumId', validationRules.updateRules, controller.update);
 
 module.exports = router;

@@ -3,18 +3,18 @@
 const { body } = require('express-validator');
 const models = require('../models');
 
-// Create Album validation rules
+// Create album validation rules
 const createRules = [
-    body('title').exists().isLength({ min: 2 }),
+    body('title').exists().isLength({ min: 3 }),
 ];
 
-// Update Album validation rules
+// Update album validation rules
 const updateRules = [
-    body('title').optional().isLength({ min: 2 }),
+    body('title').optional().isLength({ min: 3 }),
 ];
 
 
-const addPhotoRules = [
+const attachPhotoRules = [
 	body('photo_id').exists().isInt().bail().custom(async value => {
 		const photo = await new models.Photo({ id: value }).fetch({ require: false });
 		if (!photo) {
@@ -27,5 +27,5 @@ const addPhotoRules = [
 module.exports = {
     createRules,
     updateRules,
-	addPhotoRules
+	attachPhotoRules
 };

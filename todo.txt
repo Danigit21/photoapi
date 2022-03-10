@@ -1,6 +1,8 @@
 @todo list
 
 1. POST /albums and POST /photos doesn't work, "Field 'title' doesn't have a default value."
+    authorization required
+    
 2. Authentication doesnt work? can see everyones photos
 
 
