@@ -58,9 +58,9 @@ CREATE TABLE `users` (
 
 
 INSERT INTO `users` (`id`, `email`, `password`, `first_name`, `last_name`) VALUES
-(1, 'johan@hej.com', 'asdf', 'Johan', 'Nordström'),
-(2, 'sean_banan@da.com', 'chiquita', 'Sean', 'Banan'),
-(3, 'photo@api.com', 'photoapi', 'Photo', 'Api');
+(1, 'johan@hej.com', '$2b$10$s4ti467.4JOVs2ZWls5J0eDjmZnfU2TitNvx6EVKfAc505v2xDAPe', 'Johan', 'Nordström'),
+(2, 'sean_banan@da.com', '$2b$10$8lXGY1XJxSG6juIxExSZaelSEeop.agY72.QCFuO9FLB8NmE1vQO2', 'Sean', 'Banan'),
+(3, 'photo@api.com', '$2b$10$9BGZwnQJH.sHRrnURsl41uBi4jySBMZpWSSwW2T5lofdNdEQuE6PC', 'Photo', 'Api');
 
 
 -- --------------------------------------------------------
