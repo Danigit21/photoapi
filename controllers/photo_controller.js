@@ -119,13 +119,13 @@ const update = async (req, res) => {
     validData.user_id = req.user.id;
 
     try {
-        const updatedPhoto = await photo.save(validData);
+        const updatedPhoto = await usersPhoto.save(validData);
         debug("Photo was updated %O", updatedPhoto);
 
         res.send({
             status: 'success',
             data: {
-                photo
+                usersPhoto
             }
         });
 

@@ -116,13 +116,13 @@ const update = async (req, res) => {
     validData.user_id = req.user.id;
 
     try {
-        const updatedAlbum = await album.save(validData);
+        const updatedAlbum = await usersAlbum.save(validData);
         debug("Album was updated %O", updatedAlbum);
 
         res.send({
             status: 'success',
             data: {
-                album
+                usersAlbum
             }
         });
 
