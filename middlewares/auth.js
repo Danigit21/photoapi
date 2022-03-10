@@ -37,12 +37,12 @@ const basic = async (req, res, next) => {
   
     const user = await models.User.login(email, password);
   
-      if (!user) {
-          return res.status(401).send({
-              status: 'fail',
-              data: 'Authorization failed',
-          });
-      }
+    if (!user) {
+        return res.status(401).send({
+            status: 'fail',
+            data: 'Authorization failed',
+        });
+    }
   
     // attach the user to the request
     req.user = user;
