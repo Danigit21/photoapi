@@ -1,0 +1,9 @@
+USERS:
+email: johan@hej.com
+password: very-safe-password
+
+email: sean_banan@da.com
+password: chiquitaBanana
+
+email: photo@api.com
+password: Photo-api12
